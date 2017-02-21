@@ -1,7 +1,0 @@
-http://www.yougou.com/#ref=all&po=logo_yougou首页
-http://www.yougou.com/f-0-PTK-0-1.html商品列表页
-http://www.yougou.com/c-camel/sku-a712252150-100512118.shtml?商品详情页
-http://www.yougou.com/order.jhtml购物车结算页面
-https://passport.yougou.com/register.jhtml?redirectURL=http://www.yougou.com/order.jhtml注册页面
-https://passport.yougou.com/signin.jhtml?redirectURL=http://www.yougou.com/c-camel/sku-a712252150-100512118.shtml?登陆页面
-register login
