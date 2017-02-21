@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<link rel="stylesheet" type="text/css" href="../style/yg_shoppingcart.css">
+	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script src="http://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+	<script type="text/javascript" src="../js/yg_shoppingcart.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="header">
+		<div id="top">
+			<div class="topNav center clearfix">
+				<ul class="mainNav left">
+					<li style="background: white"><a href="javascript:void(0)">时尚商城</a></li>
+					<li style="background: #b90000;" ><a style="color: white;" href="javascript:void(0)">海外淘</a></li>
+					<li class="download relative">
+						<i class="iconfont icon-icon" style="color:red"></i><a class="download" href="javascript:void(0)">手机优购</a><i class="iconfont icon-down-copy"></i>
+						<div class="downloadImg absolute">
+							<img src="../img/app-rqcode.jpg">
+							<p>下载安装<span>优购客户端</span></p>
+						</div>
+					</li>
+				</ul>
+				<ul class="loginNav right clearfix">
+					<li class="loginBtn"><a style="color: #e60012" href="javascript:void(0)">登陆</a></li>
+					<li class="registerBtn"><a style="color: #e60012" href="javascript:void(0)">注册</a></li>
+					<li style="padding: 0"><a href="javascript:void(0)">|</a></li>
+					<li class="relative myyg">
+						<a href="javascript:void(0)">我的优购</a><i class="iconfont icon-down-copy"></i>
+						<ul class="myyglist absolute">
+							<li><a href="javascript:void(0)">我的收藏</a></li>
+							<li><a href="javascript:void(0)"><i>等待点评</i>(<span style="color: #c81623">0</span>)</a></li>
+							<li><a href="javascript:void(0)"><i>站内消息</i>(<span style="color: #c81623">0</span>)</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">我的订单</a></li>
+					<li class="relative gonggao">
+						<a href="javascript:void(0)">公告</a><i class="iconfont icon-down-copy"></i>
+						<div class="absolute gonggaolist">
+							<p><a href="javascript:void(0)">优购春节期间物流安排通知</a></p>
+							<p><a href="javascript:void(0)">海外购平台春节期间物流安排的通知</a></p>
+							<p><a href="javascript:void(0)">分享购官方微信</a></p>
+							<p><a href="javascript:void(0)">分享购QQ群518411158</a></p>
+							<p><a href="javascript:void(0)">关于跨境商品征税新政策调整</a></p>
+						</div>
+					</li>
+					<li class="relative gengduo">
+						<a href="javascript:void(0)">更多</a><i class="iconfont icon-down-copy"></i>
+						<ul class="gengduolist absolute">
+							<li><a href="javascript:void(0)">收藏优购</a></li>
+							<li><a href="javascript:void(0)">帮助</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="shoppingCartBody" class="center">
+		<div class="header center clearfix">
+			<h1 class="left"><a href="yg_homePage.html" target="_blank"></a></h1>
+			<ul class="right">
+				<li class="left" style="background: #f90;color: white">我的购物车</li>
+				<li class="left">提交订单中心</li>
+				<li class="left">成功提交订单</li>
+			</ul>
+		</div>
+		<div class="cartBody center">
+		  	<div class="content center clearfix">
+		  		<div class="bg left"></div>
+		  		<div class="info left">
+		  			<p>您的购物车中暂无商品，赶快选择心爱的商品吧！</p>
+		  			<a href="yg_homePage.html" target="_self" class="backhome">回到首页</a>
+		  			<p>
+		  				<p>您可以：</p>
+		  				<p>查看<a href="javascript:void(0)">我的收藏夹</a></p>
+		  				<p>查看<a href="javascript:void(0)">我已购买的商品</a></p>
+		  			</p>
+		  		</div>
+		  	</div>
+		</div>
+		<div class="yourGoods">
+				<table>
+					<tr>
+						<th><input type="checkbox" class="allchecked check"><label>全选</label></th>
+						<th>商品名称</th>
+						<th>颜色尺码</th>
+						<th>单价</th>
+						<th>数量</th>
+						<th>小计(元)</th>
+						<th>操作</th>
+					</tr>
+				</table>
+				<dl class="goodsInfo">
+					<dd><input type="checkbox" class="checkSelf"></dd>
+					<dd><img src="../img-shoppingcart/100515480_01_t.jpg"></dd>
+					<dd><p>花花公子（PLAYBOY） DS65110男士商务休闲鞋英伦潮流系带休闲皮鞋深蓝</p></dd>
+					<dd>
+						<p>颜色:<span>深蓝</span></p>
+						<p>颜色:<span>39</span></p>
+					</dd>
+					<dd class="goodsprice">268</dd>
+					<dd class="clearfix">
+						<a href="javascript:void(0)" class="left reduce">-</a><input type="text" value="1" class="goodsnum"><a href="javascript:void(0)" class="left sum">+</a>
+					</dd>
+					<dd><span class="pricesum pricesum1">268</span></dd>
+					<dd>
+						<a href="javascript:void(0)">移入收藏夹</a><a href="javascript:void(0)" class="remove">删除</a>
+					</dd>
+				</dl>
+				<ul class="goodschoice clearfix">
+					<li class="left"><input type="checkbox" class="allchecked2 check"><label>全选</label></li>
+					<li class="left"><a href="javascript:void(0)">移入收藏夹</a></li>
+					<li class="left"><a href="javascript:void(0)" class="removeAll">删除</a></li>
+				</ul>
+				<div class="goodsInfoBottom">
+					<a href="yg_homePage.html" class="left continue">继续购物</a>
+					<a href="javascript:void(0)" class="left removecart">清空购物车</a>
+					<div class="right clearfix last">
+						<strong class="left">总计（不含运费 ）</strong>
+						<strong class="left">¥</strong>
+						<strong class="pricesum left">0</strong>
+						<a href="javascript:void(0)" class="settlement left"></a>
+					</div>
+				</div>
+		</div>
+		<div class="promise center">
+			<p>购物保障：
+			<i style="background: url(../img-shoppingcart/shopcart-sprite-v4.png) 0 0;"></i>
+			100%正品
+			<i style="background: url(../img-shoppingcart/shopcart-sprite-v4.png) 0 -17px;"></i>
+			10天退换货
+			<i style="background: url(../img-shoppingcart/shopcart-sprite-v4.png) 0 -37px;"></i>
+			10天补差价
+			</p>
+			<p>优惠券/礼品卡在下一步使用</p>
+			<p>帮助我们改进购物流程</p>
+		</div>
+	</div>
+</body>
+</html>

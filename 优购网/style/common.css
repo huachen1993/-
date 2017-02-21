@@ -1,0 +1,528 @@
+/*---------------重置样式--------------*/
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-family: 'Microsoft Yahei';
+	font-size: 12px;
+	background: #f8f8f8;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+a:hover{
+	color: #c81623;
+}
+b,i,em{
+	font-style: normal;
+	font-weight: normal;
+}
+span{
+	color: #666;
+}
+img{
+	border:none;
+	cursor: pointer;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+	z-index: 3;
+	background: white;
+}
+/* 居中 */
+.center{margin: 0 auto;}
+/* 万能清除浮动 */
+.clearfix:after{content: "";display: block;clear: both;}
+/*---------------头部--------------*/
+#header{
+	width: 100%;
+}
+#top{
+	width: 100%;
+	height: 30px;
+	background: #f8f8f8;
+	border-bottom: 2px solid #eee;
+}
+.topNav{
+	width: 1190px;
+}
+
+.mainNav li{
+	float: left;
+	width: 98px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	border-right: 1px solid white;
+}
+/*-------------------下载信息----------------*/
+.mainNav .download .downloadImg{
+	padding: 10px;
+	background: white;
+	z-index: 13;
+	display: none;
+}
+.mainNav .download:hover{
+	background: white;
+}
+.mainNav .download:hover .downloadImg{
+	display: block;
+}
+
+.loginNav li{
+	float: left;
+	padding: 0 20px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #f8f8f8;
+}
+.loginNav .loginBtn{
+	padding-right: 10px;
+}
+.loginNav .registerBtn{
+	padding-left: 10px;
+}
+.loginNav .iconfont{
+	line-height: 30px;
+}
+/*-----------我的优购-------------*/
+.loginNav .myyglist{
+	display: none;
+	left: -1px;
+	width: 100%;
+	background: white;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.loginNav .myyglist li{
+	border: none;
+}
+.loginNav li span{
+	height: 30px;
+	line-height: 30px;
+}
+.loginNav .myyg:hover{
+	background: white;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+.loginNav .myyg:hover .myyglist{
+	display: block;
+}
+/*-----------公告-------------*/
+.gonggaolist{
+	display: none;
+	right: -1px;
+	padding: 10px 20px;
+	width: 200px;
+	background: white;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.gonggaolist p{
+	width: 200px;
+	text-align: left;
+	line-height: 20px;
+}
+.loginNav .gonggao:hover{
+	background: white;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+.loginNav .gonggao:hover .gonggaolist{
+	display: block;
+}
+/*-----------更多-------------*/
+.gengduolist{
+	display: none;
+	right: -1px;
+	width: 120px;
+	background: white;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.gengduolist li{
+	border: none;
+}
+.loginNav .gengduo:hover{
+	background: white;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+.loginNav .gengduo:hover .gengduolist{
+	display: block;
+}
+/*-----------------头部----------*/
+.head{
+	width: 1190px;
+	height: 96px;
+	padding: 20px 0;
+}
+/*搜索区域*/
+.searchArea{
+	position: relative;
+	margin: 20px 0 0 100px;
+	width: 510px;
+}
+.search{
+	margin-bottom: 10px;
+	padding: 2px;
+	width: 530px;
+	height: 31px;
+	background: #000;
+}
+.search .searchContent{
+	float: left;
+	width: 450px;
+	line-height: 31px;
+	border: none;
+	font-size: 15px;
+	outline: none;
+	text-indent: 8px;
+}
+.search .searchBtn{
+	float: left;
+	width: 70px;
+	height: 30px;
+	background: #000;
+	border: none;
+	color: white;
+	font-size: 18px;
+	outline: none;
+	text-align: center;
+	cursor:pointer;
+}
+#searchList{
+	position: absolute;
+	/* left: 320px;
+	top: 35px; */
+	left: 0;
+	top: 35px;
+	z-index: 4;
+	width: 450px;
+	font-size: 14px;
+	border:1px solid #ccc;
+	border-top: none;
+	background: #fff;
+	display: none;
+}
+#searchList li{
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.hotwords li{
+	padding: 0 3px;
+	height: 18px;
+}
+.hotwords li span{
+	margin-left: 3px;
+}
+/*首页购物车*/
+.shoppingCarifon{
+	margin-top: 20px;
+}
+.shoppingcar{
+	margin-bottom: 10px;
+	width: 146px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	background: white;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+.shoppingcar .iconfont{
+	font-size: 20px;
+	padding: 0 10px;
+}
+.shoppingCarifon p{
+	width: 146px;
+	height: 19px;
+	text-align: center;
+}
+.shoppingcar .sccontent{
+	display: none;
+	right: -1px;
+	top: 33px;
+	padding: 10px 50px;
+	width: 190px;
+	border: 1px solid #ccc;
+}
+.shoppingcar:hover{
+	border-bottom: none;
+}
+.shoppingcar:hover .sccontent{
+	display: block;
+}
+/*---------------主导航--------------*/
+#mainNavArea{
+	width: 100%;
+	height: 40px;
+	border-bottom: 3px solid #000;
+}
+#mainNav{
+	width: 1190px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: 900;
+	text-align: center;
+}
+#mainNav li{
+	width: 80px;
+	height: 40px;
+}
+#mainNav a{
+	color: #000;
+}
+#mainNav a:hover{
+	color: #c81623; 
+}
+#mainNav .allNav{
+	display: block;
+	width: 200px;
+	height: 40px;
+	background: #000;
+	color: white;
+}
+/*---------------优购导购--------------*/
+/*---------------guideTitle--------------*/
+.guideTitle{
+	margin-top: 35px;
+	width: 1190px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 2px solid #000;
+	color: #666;
+	font-size: 18px;
+}
+.guideTitle span{
+	margin-left: 10px;
+	font-size: 16px;
+	color: #666;
+	font-weight: normal;
+}
+.guideTitle a{
+	margin-left: 10px;
+	font-size: 16px;
+	font-weight: normal;
+}
+#guide{
+	width: 1190px;
+	height: 475px;
+	border-width: 0 1px 1px 1px;
+	border-color: rgb(238, 238, 238);
+	border-style:solid;
+	background: white;
+	box-sizing: border-box;
+}
+#brand{
+	position: relative;
+	padding-top: 20px;
+	width: 1080px;
+	height: 240px;
+}
+.brandList{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	width: 1080px;
+}
+#brand .brandListFirst{
+	z-index: 1;
+	opacity: 1;
+	filter: alpha(opacity:100);
+}
+#brand .brandListSecond{
+	z-index: 0;
+	opacity: 0;
+	filter: alpha(opacity:0);
+}
+.brandList li{
+	float: left;
+	width: 90px;
+	height: 60px;
+	border: 1px solid rgb(238, 238, 238);
+	box-sizing: border-box;
+}
+.brandList li a>span{
+	color: #666;
+}
+.brandList li a:hover span{
+	color: #c81623;
+}
+.brandList li img{
+	display: block;
+}
+.brandList li span{
+	display: block;
+	text-align: center;
+}
+.brandBtn a{
+	position: absolute;
+	top: 50%;
+	left: -40px;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 40px;
+	text-align: center;
+	color: #ccc;
+}
+.brandBtn .brandRightBtn{
+	left: auto;
+	right: -40px;
+}
+#commodityClassification{
+	margin-top: 20px;
+	width: 1190px;
+}
+#commodityClassification li{
+	padding:0 40px;
+	margin-bottom: 10px;
+	float: left;
+	width: 510px;
+	height: 35px;
+	line-height: 35px;
+}
+#commodityClassification li dl{
+	border-bottom: 1px dashed #ccc;	
+}
+#commodityClassification li dt{
+    width: 84px;
+	height: 29px;
+	font-size: 14px;
+    font-weight: 900;
+}
+#commodityClassification li a{
+	margin-left: 15px;
+	font-size: 13px;
+}
+/*---------------底部--------------*/
+#footer{
+	margin-top: 10px;
+	width: 100%;
+	height: 207px;
+	background: #f4f4f4;
+	border-top: 1px solid #ececec;
+}
+/*---------------footerPromise--------------*/
+.footerPromise{
+	margin-bottom: 10px;
+	padding: 10px 80px;
+	width: 1028px;
+	height: 28px;
+	border: 1px solid #ccc;
+}
+.footerPromise a{
+	float: left;
+	margin: 0 80px 0 20px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-size: 18px;
+}
+.footerPromise a em,.footerPromise a i,.footerPromise a b{
+	float: left;
+}
+.footerPromise a i{
+	margin-right: 10px;
+	width: 32px;
+	height: 32px;
+}
+/*---------------footerHelp--------------*/
+.footerHelp{
+	width: 1190px;
+}
+.footerHelp dt{
+	width: 150px;
+	height: 25px;
+	line-height: 25px;
+	text-align: left;
+}
+.footerHelp dd{
+	width: 150px;
+	height: 20px;
+	line-height: 20px;
+	text-align: left;
+}
+
+
+/*---------------footerInfo--------------*/
+#footerInfoBody{
+	width: 100%;
+	background: #000;
+}
+#footerInfo{
+	color: white;
+	width: 1190px;
+	height: 106px;
+	background: #000;
+	border-bottom: 3px solid #1f1c09;
+}
+#footerInfo a,#footerInfo span{
+	color: white;
+}
+#footerInfo a:hover{
+	color: #c81623;
+}
+.footerInfoMain{
+	width: 1190px;
+}
+.footerInfoLeft{
+	margin-top:30px;
+}
+/*---------------footerList--------------*/
+.footerList{
+	height: 25px;
+	line-height: 25px;
+}
+.footerList1{
+	margin-left: 290px;
+}
+.footerList1 li a{
+	padding: 0 5px;
+}
+.footerList2 li a{
+	padding-left: 0 2px;
+}
+.footerList2 li .theLast{
+	display: inline-block;
+	width: 190px;
+	height: 25px;
+}
+.footerList2 li span{
+	padding-right: 2px;
+}
+.footerList3{
+	padding-left:430px;
+}
+.footerList3 li{
+	margin-left: 10px;
+}
+.footerList3 img{
+	width: 108px;
+	height: 40px;
+}

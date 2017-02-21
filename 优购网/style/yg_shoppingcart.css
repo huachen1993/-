@@ -1,0 +1,237 @@
+body{
+	background: white;
+}
+input{
+	outline: none;
+}
+#shoppingCartBody{
+	width: 990px;
+}
+#shoppingCartBody h2{
+	height: 24px;
+	font-size: 16px;
+	color: #999;
+	margin-bottom: 10px;
+}
+/*购物车头部*/
+#shoppingCartBody .header{
+	margin-top: 20px;
+}
+#shoppingCartBody .header h1{
+	width: 355px;
+	height: 50px;
+	background: url(../img-shoppingcart/logo.jpg?bf701d76899056f1c76928124aa7f2a7) 0 0px;
+}
+#shoppingCartBody .header ul{
+	margin-top: 15px;
+}
+#shoppingCartBody .header li{
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	background: #eee;
+}
+/*购物车内容*/
+#shoppingCartBody .cartBody{
+	display: none;
+	margin-top: 10px;
+	padding: 30px;
+	height: 205px; 
+	background: white;
+}
+#shoppingCartBody .cartBody .content{
+	width: 400px;
+	height: 143px;
+}
+.cartBody .content .bg{
+	width: 70px;
+	height: 57px;
+	background: url(../img-shoppingcart/shopcart-sprite-v4.png) -30px -153px;
+}
+.cartBody .content .info{
+	margin-top: 10px;
+	width: 308px;
+}
+.cartBody .content .info .backhome{
+	display: block;
+    width: 90px;
+    height: 26px;
+    display: block;
+    font: bold 14px/26px '';
+    text-align: center; 
+	background: #fdf6ec;
+    border: 1px solid #e9ca93;
+    border-radius: 3px;
+}
+.cartBody .content .info>p{
+	margin: 10px 0;
+}
+.cartBody .content .info>p>a{
+	color: #36c;
+}
+#shoppingCartBody .promise{
+	margin-top: 10px;
+}
+#shoppingCartBody .promise p{
+	text-align: right;
+	height: 22px;
+	line-height: 22px;
+	color: #ccc;
+}
+#shoppingCartBody .promise i{
+	margin-bottom: -4px;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+/*购物车推荐*/
+#shoppingCartBody .recommend{
+	height: 645px;
+	border: 1px solid #ccc;
+	background: white; 
+}
+.recommend .recommendPage{
+	padding-right: 20px;
+	height: 25px;
+	line-height: 25px;
+	text-align: right;
+}
+
+/*加入购物车的商品信息*/
+.yourGoods{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+/*商品信息表头*/
+.yourGoods table{
+	border-bottom: 1px solid #ccc;
+	color: #999;
+	line-height: 42px;
+	font-size: 13px;
+}
+.yourGoods table th{
+	width: 110px;
+}
+.yourGoods table th:nth-of-type(2){
+	width: 370px;
+}
+/*商品信息*/
+.goodsInfo{
+	padding: 10px 0;
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+}
+.goodsInfo dd{
+	float: left;
+	width: 110px;
+}
+.goodsInfo dd:nth-of-type(1){
+	width: 30px;
+	margin: 25px 0 0 15px;
+}
+.goodsInfo dd:nth-of-type(2){
+	width: 60px;
+	height: 60px;
+	margin-right: 20px;
+	border: 1px solid #ccc;
+}
+.goodsInfo dd:nth-of-type(3){
+	margin: 10px 75px 0 30px;
+	width: 250px;
+}
+.goodsInfo dd:nth-of-type(4){
+	margin-top: 10px;
+
+}
+.goodsInfo dd:nth-of-type(4) p{
+	line-height: 20px;
+}
+.goodsInfo dd:nth-of-type(5){
+	margin-top: 20px;
+	width: 100px;
+	text-indent: 10px;
+}
+.goodsInfo dd:nth-of-type(6){
+	margin-top: 20px;
+}
+.goodsInfo dd:nth-of-type(6) a{
+	width: 14px;
+	height: 16px;
+	text-align: center;
+	line-height: 14px;
+	border: 1px solid #ccc;
+}
+.goodsInfo dd:nth-of-type(7){
+	text-indent: 10px;
+	margin-top: 20px;
+	width: 80px;
+	overflow: hidden;
+}
+.goodsInfo dd:nth-of-type(7) span{
+	color: #c81623;
+	font-size: 13px;
+	font-weight: 900;
+}
+.goodsInfo dd:nth-of-type(8){
+	margin-top: 10px;
+	width: 100px;
+	color: #c81623;
+	font-size: 13px;
+	font-weight: 900;
+}
+.goodsInfo dd:nth-of-type(8) a{
+	line-height: 20px;
+	display: block;
+	text-align: center;
+}
+.goodsnum{
+	float: left;
+	width: 18px;
+	height: 14px;
+	text-align: center;
+}
+
+/*再次选择*/
+.goodschoice{
+	margin-bottom: 15px;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+.goodschoice li{
+	width: 90px;
+	margin: 15px 0 0 15px;
+}
+/*商品信息底部*/
+.goodsInfoBottom{
+	height: 54px;
+
+}
+.goodsInfoBottom a{
+	display: block;
+}
+.goodsInfoBottom .continue{
+	margin:0 40px;
+	width: 126px;
+	line-height: 42px;
+	text-align: center;
+	background: url(../img-shoppingcart/shopcart-sprite-v4.png) -20px -108px;
+}
+.removecart{
+	margin-top: 10px;
+	color: #36c; 
+}
+.last{
+	line-height: 44px;
+	color: #999;
+}
+.pricesum{
+	color: #e60012;
+	font-size: 20px;
+}
+.settlement{
+	margin-left: 50px;
+	width: 129px;
+	height: 54px;
+	background: url(../img-shoppingcart/shopcart-sprite-v4.png) -20px -54px;
+}

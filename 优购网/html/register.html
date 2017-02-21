@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<link rel="stylesheet" type="text/css" href="../style/login.css">
+	<link rel="stylesheet" type="text/css" href="../style/register.css">
+	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script src="http://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+	<script type="text/javascript" src="../js/register.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="header">
+		<div id="top">
+			<div class="topNav center clearfix" style="width: 990px;">
+				<ul class="mainNav left">
+					<li><a href="javascript:void(0)">时尚商城</a></li>
+					<li class="download">
+						<i class="iconfont icon-icon" style="color:red"></i><a class="download" href="javascript:void(0)">手机优购</a><i class="iconfont icon-down-copy"></i>
+					</li>
+				</ul>
+				<ul class="loginNav right clearfix">
+					<li class="loginBtn"><a style="color: #e60012" href="javascript:void(0)">登陆</a></li>
+					<li class="registerBtn"><a style="color: #e60012" href="javascript:void(0)">注册</a></li>
+					<li style="padding: 0"><a href="javascript:void(0)">|</a></li>
+					<li><a href="javascript:void(0)">我的优购</a><i class="iconfont icon-down-copy"></i></li>
+					<li><a href="javascript:void(0)">我的订单</a></li>
+					<li><a href="javascript:void(0)">公告</a><i class="iconfont icon-down-copy"></i></li>
+					<li><a href="javascript:void(0)">更多</a><i class="iconfont icon-down-copy"></i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="register_login_header">
+		<div class="rlhc center clearfix">
+			<h2 class="left"><a href="yg_homePage.html" target="_blank"><img src="../img/signin-register-logo.png"></a></h2>
+			<p class="left"><b>用户登录</b></p>
+		</div>
+	</div>
+	<div id="register_login_body"  class="center">
+		<div style="width: 990px;" class="center clearfix">
+			<form action="javascript:void(0)" class="right form" style="margin-top: 15px;padding-bottom: 40px;">
+				<ul class="formHeader center clearfix">
+					<li class="left"><a href="login.html" target="_self">登陆</a></li>
+					<li style="background: #000" class="left"><a href="register.html" target="_self" style="color: #fff" href="javascript:void(0)">注册</a></li>
+				</ul>
+				<div class="center clearfix">
+					<select class="left select">
+						<option value="phonenumber">手机号</option>
+						<option value="e-mail">邮箱</option>
+					</select>
+					<input type="text" placeholder="请输入您的手机号" style="text-indent: 8px;" class="user">
+				</div>
+				<p class="usernameError center"><i class="iconfont icon-cuowu"></i><b>请输入手机号码</b></p>
+				<div class="center clearfix" style="width:310px; border: none;">
+					<div class="clearfix left" style="width:150px;border: 1px solid #ccc;line-height: 36px;">
+						<i class="left" style="color: #666">验证码</i><input type="text" style="text-indent: 8px;width: 114px;height: 36px;border: none;" class="left code1">
+					</div>
+					<a href="javascript:void(0)" class="right"><img src="../img/imageCaptcha.png"></a>
+				</div>
+				<p class="code1Error center"><i class="iconfont icon-cuowu"></i><b>请输入验证码</b></p>
+				<div class="center clearfix" style="width:310px; border: none;">
+					<div class="clearfix left" style="width:200px;border: 1px solid #ccc;line-height: 36px;">
+						<i class="left" style="color: #666;width:60px;">短信验证码</i><input type="text" style="text-indent: 8px;width: 140px;height: 36px;border: none;" class="left code">
+					</div>
+					<a href="javascript:void(0)" class="right getYanzhengma" style="width: ">获取验证码</a>
+				</div>
+				<p class="codeError center"><i class="iconfont icon-cuowu"></i><b>请输入短信验证码</b></p>
+				<div class="center clearfix">
+					<i class="left">密码</i>
+					<input type="password" placeholder="字母、数字、符号均可,6-25个字符以内" style="text-indent: 4px;" class="password">
+				</div>
+				<p class="passwordError center"></p>
+				<div class="center clearfix">
+					<i class="left" style="width: 60px">确认密码</i>
+					<input type="password" style="text-indent: 4px;width: 225px" class="confirmpassword">
+				</div>
+				<p class="confirmError center"><i class="iconfont icon-cuowu"></i><b>请输入密码</b></p>
+				<div class="center clearfix submit"><input type="submit" value="点击注册"></div>
+			</form>
+		</div>
+	</div>
+	<div class="register_login_footer">
+		<ul class="footerList footerList2 clearfix center" style="width: 990px;">
+			<li class="left"><span>Copyright © 2011-2016 Yougou Technology Co., Ltd.</span><a href="javascript:void(0)">粤ICP备09070608号-4</a></li>
+			<li class="left"><span>增值电信业务经营许可证：</span><a href="javascript:void(0)">粤 B2-20090203</a></li>
+		</ul>
+	</div>
+</body>
+</html>

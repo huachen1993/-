@@ -1,0 +1,15 @@
+(function($){
+	$(function(){
+		//品牌列表
+		$('.duoxuan').bind('click',function(){
+			$('.choiceImg').css({display:'none'});
+			$('#choiseBtn').css({display:'none'});
+			$('.morechoice').css({display:'block'});
+		});
+		$('.quxiao').bind('click',function(){
+			$('.choiceImg').css({display:'block'});
+			$('#choiseBtn').css({display:'block'});
+			$('.morechoice').css({display:'none'});
+		});
+	});
+})(jQuery);

@@ -1,0 +1,18 @@
+.form .select{
+	height: 36px;
+	outline: none;
+	color: #666;
+	border: none;
+}
+.getYanzhengma{
+	width: 70px;
+	height: 38px;
+	line-height: 38px;
+	background: #000;
+	text-align: center;
+	color: white;
+}
+.getYanzhengma:hover{
+	background: #c81623;
+	color: white;
+}

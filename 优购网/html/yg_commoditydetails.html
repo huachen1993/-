@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<link rel="stylesheet" type="text/css" href="../style/yg_commditydetails.css">
+	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script src="http://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/yg_commoditydetails.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="header">
+		<div id="top">
+			<div class="topNav center clearfix">
+				<ul class="mainNav left">
+					<li style="background: white"><a href="javascript:void(0)">时尚商城</a></li>
+					<li style="background: #b90000;" ><a style="color: white;" href="javascript:void(0)">海外淘</a></li>
+					<li class="download relative">
+						<i class="iconfont icon-icon" style="color:red"></i><a class="download" href="javascript:void(0)">手机优购</a><i class="iconfont icon-down-copy"></i>
+						<div class="downloadImg absolute">
+							<img src="../img/app-rqcode.jpg">
+							<p>下载安装<span>优购客户端</span></p>
+						</div>
+					</li>
+				</ul>
+				<ul class="loginNav right clearfix">
+					<li class="loginBtn"><a style="color: #e60012" href="login.html">登陆</a></li>
+					<li class="registerBtn"><a style="color: #e60012" href="register.html">注册</a></li>
+					<li style="padding: 0"><a href="javascript:void(0)">|</a></li>
+					<li class="relative myyg">
+						<a href="javascript:void(0)">我的优购</a><i class="iconfont icon-down-copy"></i>
+						<ul class="myyglist absolute">
+							<li><a href="javascript:void(0)">我的收藏</a></li>
+							<li><a href="javascript:void(0)"><i>等待点评</i>(<span style="color: #c81623">0</span>)</a></li>
+							<li><a href="javascript:void(0)"><i>站内消息</i>(<span style="color: #c81623">0</span>)</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">我的订单</a></li>
+					<li class="relative gonggao">
+						<a href="javascript:void(0)">公告</a><i class="iconfont icon-down-copy"></i>
+						<div class="absolute gonggaolist">
+							<p><a href="javascript:void(0)">优购春节期间物流安排通知</a></p>
+							<p><a href="javascript:void(0)">海外购平台春节期间物流安排的通知</a></p>
+							<p><a href="javascript:void(0)">分享购官方微信</a></p>
+							<p><a href="javascript:void(0)">分享购QQ群518411158</a></p>
+							<p><a href="javascript:void(0)">关于跨境商品征税新政策调整</a></p>
+						</div>
+					</li>
+					<li class="relative gengduo">
+						<a href="javascript:void(0)">更多</a><i class="iconfont icon-down-copy"></i>
+						<ul class="gengduolist absolute">
+							<li><a href="javascript:void(0)">收藏优购</a></li>
+							<li><a href="javascript:void(0)">帮助</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="head center clearfix">
+			<div class="logo left"><a href="javascript:void(0)"><img src="../img/logo.jpg"></a></div>
+			<div class="searchArea left">
+				<form action="javascript:void(0)" class="search clearfix" id="search">
+					<input type="text" class="searchContent" id="content" autocomplete="off">
+					<button class="iconfont icon-sousuo searchBtn"> 搜索</button>
+				</form>
+				<ul id="searchList"></ul>
+				<ul class="hotwords clearfix">
+					<li class="left"><a style="color:#e60012" href="javascript:void(0)">17年新品</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">夹克</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">冲锋衣</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">新品女鞋</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">耐克</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">阿迪达斯</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">春款男鞋</a><span>|</span></li>
+					<li class="left"><a href="javascript:void(0)">专柜同款</a></li>
+				</ul>
+			</div>
+			<div class="shoppingCarifon right">
+				<div class="shoppingcar relative">
+					<div><i class="iconfont icon-gouwuche" style="color:red"></i><b>购物车(</b><b style="color: red">0</b><b>)件</b><i class="iconfont icon-down-copy" style="color:red"></i>
+					</div>
+					<div class="sccontent absolute">
+						<p style="width: 190px;height: 30px;">您的购物车中还没有任何商品！</p>
+					</div>
+				</div>
+				<p style="color: red">百丽国际旗下购物网站</p>
+			</div>
+		</div>
+	</div>
+	<!-- 主体导航区域 -->
+	<div id="mainNavArea">
+		<ul id="mainNav" class="center clearfix">
+			<li class="left allNav"><a style="color: white" href="javascript:void(0)">全部商品分类</a></li>
+			<li class="left"><a href="javascript:void(0)">运动馆</a></li>
+			<li class="left"><a href="javascript:void(0)">户外馆</a></li>
+			<li class="left"><a href="javascript:void(0)">鞋靴馆</a></li>
+			<li class="left"><a href="javascript:void(0)">服装馆</a></li>
+			<li class="left"><a href="javascript:void(0)">母婴童</a></li>
+			<li class="left"><a href="javascript:void(0)">海外购</a></li>
+			<li class="right"><a href="javascript:void(0)">秒杀</a></li>     
+		</ul>
+	</div>
+	<!-- 商品详情主体 -->
+	<div id="commodityBody" class="center">
+		<!-- 商品详情位置 -->
+		<dl class="clearfix yourposition">
+			<dt class="left">您当前的位置:</dt>
+			<dd class="left"><a href="javascript:void(0)">首页</a><span>></span></dd>
+			<dd class="left"><a href="javascript:void(0)">运动户外</a><span>></span></dd>
+			<dd class="left"><a href="javascript:void(0)">运动</a><span>></span></dd>
+			<dd class="left"><a href="javascript:void(0)">专业运动</a><span>></span></dd>
+			<dd class="left"><a href="javascript:void(0)">跑步</a><span>></span></dd>
+			<dd class="left">NIKE耐克2017年新款男子NIKE ZOOM WINFLO 3跑步鞋831561-001</dd>
+		</dl>
+		<!-- 商品信息 -->
+		<div id="goods" class="clearfix">
+			<!-- 商品图片区域 -->
+			<div class="goodsImg left relative">
+				<div class="middleImg relative">
+					<img src="../img-yg_commoditydetails/1.jpg">
+					<div class="zhezhao absolute"></div>
+				</div>
+				<div>
+					<ul class="smallImg clearfix">
+						<li class="left active"><img src="../img-yg_commoditydetails/1.jpg"></li>
+						<li class="left"><img src="../img-yg_commoditydetails/2.jpg"></li>
+						<li class="left"><img src="../img-yg_commoditydetails/3.jpg"></li>
+						<li class="left"><img src="../img-yg_commoditydetails/4.jpg"></li>
+						<li class="left"><img src="../img-yg_commoditydetails/5.jpg"></li>
+						<li class="left"><img src="../img-yg_commoditydetails/6.jpg"></li>
+						<li class="left"><img src="../img-yg_commoditydetails/7.jpg"></li>
+					</ul>
+				</div>
+				<div class="bigImg absolute"><img src="../img-yg_commoditydetails/1.jpg"></div>
+				<div class="goodsImgBottom clearfix">
+					<div class="left">商品编号：100488616</div>
+					<div class="right">
+						<div class="share relative left">
+							<i></i><a href="href:javascript:void(0)">分享</a>
+							<div class="absolute clearfix sharePos">
+								<h4>分享到</h4>
+								<div class="shareto">
+									<a href="javascript:void(0)">一键分享</a>
+									<a href="javascript:void(0)">微信</a>
+									<a href="javascript:void(0)">QQ好友</a>
+									<a href="javascript:void(0)">QQ空间</a>
+									<a href="javascript:void(0)">新浪微博</a>
+									<a href="javascript:void(0)">腾讯微博</a>
+									<a href="javascript:void(0)">腾讯朋友</a>
+									<a href="javascript:void(0)">人人网</a>
+									<a href="javascript:void(0)">豆瓣网</a>
+									<a href="javascript:void(0)">开心网</a>
+									<a href="javascript:void(0)">百度新首页</a>
+									<a href="javascript:void(0)">美丽说</a>
+								</div>
+							</div>
+						</div>
+						<div class="shoucang left"><i></i><a href="href:javascript:void(0)">收藏</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="goodsInfo left">
+				<h1>NIKE耐克2017年新款男子NIKE ZOOM WINFLO 3跑步鞋831561-001</h1>
+				<p>耐克</p>
+				<p><a href="javascript:void(0)">更多nike/耐克商品>></a></p>
+				<p class="price"><i>¥<span>594</span></i> <del>¥ 699</del><em>不支持使用优惠券</em></p>
+				<p class="clearfix">
+					<a href="javascript:void(0)" class="left">商品评分：9.9分  已有190人点评</a>
+					<a href="javascript:void(0)" class="right">在线咨询</a>
+				</p>
+				<div class="buy">
+					<p class="color clearfix">
+						<span class="left">颜色</span class="left">
+						<span class="clearfix left">
+							<a class="left active" href="javascript:void(0)"><img src="../img-yg_commoditydetails/11.jpg"></a>
+							<a class="left" href="javascript:void(0)"><img src="../img-yg_commoditydetails/12.jpg"></a>
+							<a class="left" href="javascript:void(0)"><img src="../img-yg_commoditydetails/13.jpg"></a>
+							<a class="left" href="javascript:void(0)"><img src="../img-yg_commoditydetails/14.jpg"></a>
+							<a class="left" href="javascript:void(0)"><img src="../img-yg_commoditydetails/15.jpg"></a>
+						</span>
+					</p>
+					<p class="size clearfix">
+						<span class="left">尺码</span>
+						<span class="left">
+							<a href="javascript:void(0)" class="left">40</a>
+							<a href="javascript:void(0)" class="left">40.5</a>
+							<a href="javascript:void(0)" class="left">41</a>
+							<a href="javascript:void(0)" class="left">42</a>
+							<a href="javascript:void(0)" class="left">42.5</a>
+							<a href="javascript:void(0)" class="left">43</a>
+							<a href="javascript:void(0)" class="left">44</a>
+							<a href="javascript:void(0)" class="left">44.5</a>
+							<a href="javascript:void(0)" class="left">45</a>
+						</span>
+					</p>
+					<p class="compareSize clearfix">
+						<span class="right"><a href="javascript:void(0)">尺码对照表>></a></span>
+					</p>
+					<p class="number clearfix">
+						<span class="left">数量</span>
+						<a href="javascript:void(0)" class="jian left"></a>
+						<input type="text" class="left" value="1">
+						<a href="javascript:void(0)" class="jia left"></a>
+						<span class="left">已选择</span>
+						<strong class="left">黑/白/上等蓝/深宝蓝</strong>
+					</p>
+					<p class="choiceStyle clearfix">
+						<a href="javascript:void(0)" class="buyNow left">立即购买</a>
+						<a href="javascript:void(0)" class="joinCar left">加入购物车</a>
+					</p>
+				</div>
+			</div>
+			<div class="goodsRecommend left">
+				<h5>......看了又看......</h5>
+				<div id="grListBody">
+					<ul class="grList">
+						<li><img src="../img-yg_commoditydetails/21.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/22.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/23.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/24.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/25.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/26.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/27.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/28.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/29.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/21.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/22.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+						<li><img src="../img-yg_commoditydetails/23.jpg"><a href="javascript:void(0)" class="clearfix"><span class="left">耐克</span><span class="right">￥455</span></a></li>
+					</ul>
+				</div>
+				<div class="grListBtn clearfix">
+					<a href="javascript:void(0)" id="grListBtnL"></a>
+					<a id="grListBtnR" href="javascript:void(0)"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 看过本商品的用户最终购买 -->
+		<div class="anther">
+			<div class="clearfix header">
+				<h4 class="left">看过本商品的用户最终购买</h4>
+				<p class="right yeshu">第<span>1</span>页，共4页</p>
+			</div>
+			<div class="goodsInfo">
+				<ul class="goodsList clearfix">
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/31.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/32.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/33.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/34.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/35.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/36.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/37.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/38.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/39.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/39.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/38.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/37.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/36.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/35.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/34.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/33.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/32.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/31.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/31.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/32.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/33.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/34.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/35.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+					<li>
+						<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/36.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+						<p><i>￥</i><span>559</span><del>¥699</del></p>
+					</li>
+				</ul>
+			</div>
+			<div class="antherBtn">
+				<a href="javascript:void(0)" class="antherBtnL"><</a>
+				<a href="javascript:void(0)" class="antherBtnR">></a>	
+			</div>
+		</div>
+		<div id="goodsIntroduce" class="clearfix">
+			<div class="clearfix">
+				<div id="goodsTab" class="left clearfix">
+					<ul class="tabHeader">
+						<li class="active"><a class="active" href="javascript:void(0)">商品详情</a></li>
+						<li><a href="javascript:void(0)">商品点评<i>191</i></a></li>
+						<li><a href="javascript:void(0)">购物保障</a></li>
+						<li><a href="javascript:void(0)">退换货无忧</a></li>
+						<li><a href="javascript:void(0)">支付与配送</a></li>
+						<li><a href="javascript:void(0)">如何保养</a></li>
+					</ul>
+					<div class="box center clearfix">	
+						<div class="xiangqing">
+							<table class="table1">
+								<tr>
+									<td class="td1">色系：</td>
+									<td class="td2">黑色</td>
+									<td class="td1">鞋帮：</td>
+									<td class="td2">低帮</td>
+								</tr>
+								<tr>
+									<td class="td1">适用人群：</td>
+									<td class="td2">男子</td>
+									<td class="td1">鞋底材质：</td>
+									<td class="td2">橡胶底</td>
+								</tr>
+								<tr>
+									<td class="td1">性别：</td>
+									<td class="td2">男子</td>
+									<td class="td1">品牌系列：</td>
+									<td class="td2">跑步其他</td>
+								</tr>
+								<tr>
+									<td class="td1">鞋面材质：</td>
+									<td class="td2">纺织物</td>
+									<td class="td1">适应项目：</td>
+									<td class="td2">训练</td>
+								</tr>
+								<tr>
+									<td class="td1">运动项目：</td>
+									<td class="td2">跑步</td>
+									<td class="td1">闭合方式：</td>
+									<td class="td2">系带</td>
+								</tr>
+								<tr>
+									<td class="td1">主要功能：</td>
+									<td class="td2">耐磨</td>
+									<td class="td1"></td>
+									<td class="td2"></td>
+								</tr>
+							</table>
+							<h4>温馨提示：</h4>
+							<hr/>
+							<table class="table2">
+								<caption>耐克男鞋</caption>
+								<tr>			
+									<td>CM</td>
+									<td>23</td>
+									<td>23.5</td>
+									<td>23.5</td>
+									<td>24</td>
+									<td>24</td>
+									<td>24.5</td>
+									<td>25</td>
+									<td>25.5</td>
+									<td>26</td>
+									<td>26.5</td>
+									<td>27</td>
+									<td>27.5</td>
+									<td>28</td>
+									<td>28.5</td>
+									<td>29</td>
+									<td>29.5</td>
+									<td>30</td>
+									<td>31</td>
+									<td>31.5</td>
+									<td>32</td>
+									<td>32.5</td>
+									<td>33</td>
+									<td>33.5</td>
+									<td>34</td>
+								</tr>
+								<tr>			
+									<td>CM</td>
+									<td>23</td>
+									<td>23.5</td>
+									<td>23.5</td>
+									<td>24</td>
+									<td>24</td>
+									<td>24.5</td>
+									<td>25</td>
+									<td>25.5</td>
+									<td>26</td>
+									<td>26.5</td>
+									<td>27</td>
+									<td>27.5</td>
+									<td>28</td>
+									<td>28.5</td>
+									<td>29</td>
+									<td>29.5</td>
+									<td>30</td>
+									<td>31</td>
+									<td>31.5</td>
+									<td>32</td>
+									<td>32.5</td>
+									<td>33</td>
+									<td>33.5</td>
+									<td>34</td>
+								</tr>
+								<tr>			
+									<td>CM</td>
+									<td>23</td>
+									<td>23.5</td>
+									<td>23.5</td>
+									<td>24</td>
+									<td>24</td>
+									<td>24.5</td>
+									<td>25</td>
+									<td>25.5</td>
+									<td>26</td>
+									<td>26.5</td>
+									<td>27</td>
+									<td>27.5</td>
+									<td>28</td>
+									<td>28.5</td>
+									<td>29</td>
+									<td>29.5</td>
+									<td>30</td>
+									<td>31</td>
+									<td>31.5</td>
+									<td>32</td>
+									<td>32.5</td>
+									<td>33</td>
+									<td>33.5</td>
+									<td>34</td>
+								</tr>						
+							</table>
+							<p>前掌工程网眼设计，透气贴合，提供有力支撑，鞋跟 Nike Zoom Air 气垫，打造出色的回弹缓震性能，轻质 Flywire 飞线，塑就动态贴合感，Cushlon 中底质感柔软，兼具出色回弹缓震性能，耐磨华夫格橡胶外底，缔造可驾驭多种地面的出色抓地力，弯曲凹槽塑就自然流畅的步伐体验。</p>
+							<ul>
+								<li><img src="../img-yg_commoditydetails/51.jpg"></li>
+								<li><img src="../img-yg_commoditydetails/52.jpg"></li>
+								<li><img src="../img-yg_commoditydetails/53.jpg"></li>
+								<li><img src="../img-yg_commoditydetails/54.jpg"></li>
+								<li><img src="../img-yg_commoditydetails/55.jpg"></li>
+								<li><img src="../img-yg_commoditydetails/56.jpg"></li>
+								<li><img src="../img-yg_commoditydetails/57.jpg"></li>
+							</ul>
+							<h3>品牌故事</h3>
+							<div class="clearfix">
+								<div class="left"><img src="../img-yg_commoditydetails/ppjs_02.jpg" alt=""></div>
+								<div class="left wenzi">NIKE是一家专业的体育用品品牌，中文译为耐克，该公司总部位于美国俄勒冈州Beaverton，生产的体育用品包罗万象：服装、鞋类、运动器材等等。NIKE英文原意指希腊胜利女神，这个名字在西方人的眼光里很是吉利。
+								<br>
+								耐克公司的商标图案是个小钩子，造型简洁有力，急如闪电，一看就让人想到使用耐克体育用品后所产生的速度和爆发力，耐克商标象征着希腊胜利女神翅膀的羽毛，代表着速度，同时也代表着动感和轻柔。它与美国的古老智慧“只管去做”(Just Do It)密不可分。耐克卖的不只是运动鞋，它所出售的是一种生活方式，这个标志对人的激励，以及这一哲学背后的干劲与决心，是与每个人都有关的，不管你是不是运动员。
+								</div>
+							</div>
+							<h3>风格理念</h3>
+							<div class="clearfix">
+								<div class="left wenzi" style="margin-right: 20px;margin-left: 0">
+									1963年，俄勒冈大学毕业生比尔·鲍尔曼和校友菲尔·奈特共同创立了一家名为"蓝带体育用品公司"(Blue Ribbon Sports)的公司，主营体育用品。1972年更名为耐克公司，从此开始缔造属于自己的传奇。
+										<br>
+									耐克商标象征着希腊胜利女神翅膀的羽毛，代表着速度，同时也代表着动感和轻柔。
+									耐克公司生产经营活动遍布全球六大洲，一直将激励全世界的每一位运动员并为其献上最好的产品视为光荣的任务。
+										<br>
+									三十年过去了，公司始终致力于为每一个人创造展现自我的机会。耐克的气垫技术给体育界带来了一场革命。运用这项技术制造出的运动鞋可以很好地保护运动员的身体。采用气垫技术的运动鞋一经推出就大受欢迎。2001年，耐克公司在研制出气垫技术后又推出了一种名为Shox的新型缓震技术。采用这种技术生产出来的运动鞋同样深受欢迎。
+										<br>
+									耐克坚持只有运用好的技术，才能生产出好的产品。除运动鞋以外，耐克公司同样致力于在服装与运动配件上创新。耐克公司制造的体育用品，例如：运用FIT技术制造的高性能纺织品，能够有效地帮助运动员在任何气象条件下进行训练和比赛。手表，眼镜等等都是高科技的结晶。
+								</div>
+								<div class="left"><img src="../img-yg_commoditydetails/ppjs_03.jpg" alt=""></div>
+							</div>
+							<h3>实拍线下专卖店</h3>
+							<div><img src="../img-yg_commoditydetails/ppjs_04.jpg"></div>
+						</div>
+					</div>
+				</div>
+				<div id="goodsIntroduceRight" class="left">
+					<h3>其他相似商品</h3>
+					<ul>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/31.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/32.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/33.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/34.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/35.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+					</ul>
+					<h3>购买了该商品的用户还购买了</h3>
+					<ul>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/31.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/32.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/33.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/34.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><img src="../img-yg_commoditydetails/35.jpg"><p>NIKE耐克新款男子NIKE ZOOM WINFLO 3 SHIELD跑步鞋</p></a>
+							<p><i>￥</i><span>559</span><del>¥699</del></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+				<!-- 价格说明 -->
+			<div class="price_explain">
+				<p><span>¥573</span>即销售价或因开展不同的优惠活动而设定的即时售价</p>
+				<p><del>¥699</del>品牌商建议零售价或牌价</p>
+			</div>
+		</div>
+	</div>
+	<h2 class="guideTitle center">优购导购</h2>
+	<!-- 优购导购 -->
+	<div id="guide" class="center clearfix">
+		<div id="brand" class="center">
+			<ul class="brandList brandListFirst clearfix center">
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/nike507646290.jpg"><span>耐克</span></a></li>
+			</ul>
+			<ul class="brandList brandListSecond clearfix center">
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+				<li><a href="javascript:void(0)"><img src="../img/adidas507638809.jpg"><span>adidas</span></a></li>
+			</ul>
+			<div class="brandBtn">
+				<a  class="brandLeftBtn" href="javascript:void(0)"><</a>
+				<a class="brandRightBtn" href="javascript:void(0)">></a>
+			</div>
+		</div>
+		<ul id="commodityClassification" class="center clearfix">
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+			<li class="clearfix">
+				<dl class="clearfix">
+					<dt class="left"><a href="javascript:void(0)">时尚运动</a></dt>
+					<dd class="left">
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+						<a href="javascript:void(0)">跑步鞋</a>
+					</dd>
+					<a href="javascript:void(0)" class="right marginLeft">更多>></a>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<!-- 优购底部 -->
+	<div id="footer">
+		<ul class="footerPromise center">
+			<li>
+				<a href="javascript:void(0)">
+					<i style="background: url(../img/sf-ico.png) no-repeat 0 -40px;"></i>
+					<em style="color: #c81623">正品</em>
+					<b>保证</b>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)">
+					<i style="background: url(../img/sf-ico.png) no-repeat -32px -40px;"></i>
+					<em style="color: #c81623">10天</em>
+					<b>退换货</b>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)">
+					<i style="background: url(../img/sf-ico.png) no-repeat -67px -40px;"></i>
+					<em style="color: #c81623">10天调价</em>
+					<b>补差额</b>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)">
+					<i style="background: url(../img/sf-ico.png) no-repeat -103px -40px;"></i>
+					<em style="color: #c81623">7X24小时</em>
+					<b>在线客服</b>
+				</a>
+			</li>
+		</ul>
+		<div class="footerHelp center clearfix">
+			<dl class="left">
+				<dt>新手帮助</dt>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+			</dl>
+			<dl class="left">
+				<dt>新手帮助</dt>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+			</dl>
+			<dl class="left">
+				<dt>新手帮助</dt>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+			</dl>
+			<dl class="left">
+				<dt>新手帮助</dt>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+			</dl>
+			<dl class="left">
+				<dt>新手帮助</dt>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+			</dl>
+			<dl class="left">
+				<dt>新手帮助</dt>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+				<dd><a href="javascript:void(0)">交易条款协议</a></dd>
+			</dl>
+			<div class="left"><img src="../img/footer-mobile-qrcode.jpg"></div>
+			<div class="right"><img src="../img/footer-wechat-qrcode.jpg"></div>
+		</div>
+	</div>
+	<!-- 优购底部信息 -->
+	<div id="footerInfoBody">
+		<div id="footerInfo" class="center">
+			<div class="footerInfoMain center clearfix">
+				<div class="footerInfoLeft left"><img src="../img/endlogo.gif" alt=""></div>
+				<div class="footerInfoRight right">
+					<ul class="footerList clearfix footerList1">
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a><span>|</span></li>
+						<li class="left"><a href="javascript:void(0)">关于优购</a></li>
+					</ul>
+					<ul class="footerList footerList2 clearfix">
+						<li class="left"><span>Copyright © 2011-2016 Yougou Technology Co., Ltd.</span><a href="javascript:void(0)">粤ICP备09070608号-4</a></li>
+						<li class="left"><span>增值电信业务经营许可证：</span><a href="javascript:void(0)"></a></li>
+						<li class="left"><span></span><a href="javascript:void(0)">粤 B2-20090203</a></li>
+						<li class="left"><span>深公网安备：4403101910665</span></li>
+						<li class="left"><a class="theLast clearfix" href="javascript:void(0)"><img class="left" src="../img/bei_an_tu_biao_.png"><span class="left">粤公网安备 44030502000017</span></a></li>
+					</ul>
+					<ul class="footerList3 clearfix">
+						<li class="left"><a href="javascript:void(0)"><img src="../img/sm_124x47.png"></a></li>
+						<li class="left"><a href="javascript:void(0)"><img src="../img/ebs.png"></a></li>
+						<li class="left"><a href="javascript:void(0)"><img src="../img/sm_124x47.png"></a></li>
+						<li class="left"><a href="javascript:void(0)"><img src="../img/sm_124x47.png"></a></li>
+						<li class="left"><a href="javascript:void(0)"><img src="../img/sm_124x47.png"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
